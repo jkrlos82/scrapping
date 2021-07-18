@@ -1,13 +1,13 @@
 <?php
 
-require('./Scrapper.class.php');
-require('./Players.class.php');
+require 'vendor/autoload.php';
+
+use src\app\Scrapper;
+use src\app\Players;
 
 $data = new Scrapper();
 
 $players = $data->getData();
-
-$players;
 
 $height = readline('Enter Player Height in Inches: ');
 

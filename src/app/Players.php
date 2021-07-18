@@ -1,5 +1,7 @@
 <?php
 
+namespace src\app;
+
 class Players {
 
     private $players;
@@ -11,7 +13,7 @@ class Players {
         $this->height = $height;
     }
 
-    private function getComplement(int $val): ?array {
+    private function getComplement(int $val): array {
         $result = [];
         foreach($this->players as $key=>$value){
             if($val == $value){

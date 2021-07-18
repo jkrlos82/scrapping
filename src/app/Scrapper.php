@@ -1,5 +1,7 @@
 <?php
 
+namespace src\app;
+
 class Scrapper {
 
     private $data;
@@ -13,7 +15,7 @@ class Scrapper {
         $this->data = curl_exec($ch);
     }
 
-    public function getData(): ?array {
+    public function getData(): array {
         $data = json_decode($this->data, true);
         $players = [];
         foreach ($data['values'] as $player){
